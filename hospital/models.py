@@ -46,7 +46,7 @@ class Patient(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     gender = models.CharField(max_length=20,choices=genders,default='Not specified')
     mobile = models.CharField(max_length=20,null=False)
-    assignedDoctorId = models.PositiveIntegerField(null=True)
+    # assignedDoctorId = models.PositiveIntegerField(null=True)
     status=models.BooleanField(default=False)
     @property
     def get_name(self):
@@ -59,10 +59,10 @@ class Patient(models.Model):
 class Appointment(models.Model):
     patientId=models.PositiveIntegerField(null=True)
     doctorId=models.PositiveIntegerField(null=True)
-    hospitalId = models.PositiveIntegerField(null=True)
+    adminId = models.PositiveIntegerField(null=True)
     patientName=models.CharField(max_length=40,null=True)
     doctorName=models.CharField(max_length=40,null=True)
-    hospitalName = models.CharField(max_length=40,null=True)
+    adminName = models.CharField(max_length=40,null=True)
     appointmentDate=models.DateField(auto_now=True)
     description=models.TextField(max_length=500)
     status=models.BooleanField(default=False)
