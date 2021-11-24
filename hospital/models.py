@@ -26,7 +26,7 @@ class Doctor(models.Model):
     def __str__(self):
         return "{} ({})".format(self.user.first_name,self.department)
 
-class Hospital(model.Model):
+class Hospital(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     mobile = models.CharField(max_length=20,null=True)
     location = models.CharField(max_length=40,null=True)
