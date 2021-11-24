@@ -485,7 +485,6 @@ def doctor_dashboard_view(request):
     mydict={
     'patientcount':patientcount,
     'appointmentcount':appointmentcount,
-    'patientdischarged':patientdischarged,
     'appointments':appointments,
     'doctor':models.Doctor.objects.get(user_id=request.user.id), #for profile picture of doctor in sidebar
     }
