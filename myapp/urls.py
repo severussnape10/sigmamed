@@ -34,7 +34,7 @@ urlpatterns = [
 
     path('admin-dashboard', views.admin_dashboard_view,name='admin-dashboard'),
 
-    path('admin-doctor', views.admin_doctor_view,name='admin-doctor'),
+    # path('admin-doctor', views.admin_doctor_view,name='admin-doctor'),
     path('admin-view-doctor', views.admin_view_doctor_view,name='admin-view-doctor'),
     path('delete-doctor-from-hospital/<int:pk>', views.delete_doctor_from_hospital_view,name='delete-doctor-from-hospital'),
     path('update-doctor/<int:pk>', views.update_doctor_view,name='update-doctor'),
