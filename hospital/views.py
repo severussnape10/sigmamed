@@ -117,14 +117,14 @@ def afterlogin_view(request):
         accountapproval=models.Doctor.objects.all().filter(user_id=request.user.id,status=True)
         if accountapproval:
             return redirect('doctor-dashboard')
-        else:
-            return render(request,'hospital/doctor_wait_for_approval.html')
+    #    else:
+    #       return render(request,'hospital/doctor_wait_for_approval.html')
     elif is_patient(request.user):
         accountapproval=models.Patient.objects.all().filter(user_id=request.user.id,status=True)
         if accountapproval:
             return redirect('patient-dashboard')
-        else:
-            return render(request,'hospital/patient_wait_for_approval.html')
+    #    else:
+    #       return render(request,'hospital/patient_wait_for_approval.html')
 
 
 
@@ -165,10 +165,10 @@ def admin_dashboard_view(request):
 
 
 # this view for sidebar click on admin page
-@login_required(login_url='adminlogin')
-@user_passes_test(is_admin)
-def admin_doctor_view(request):
-    return render(request,'hospital/admin_doctor.html')
+# @login_required(login_url='adminlogin')
+# @user_passes_test(is_admin)
+# def admin_doctor_view(request):
+#     return render(request,'hospital/admin_doctor.html')
 
 
 
