@@ -46,7 +46,7 @@ class Patient(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     gender = models.CharField(max_length=20,choices=genders,default='Not specified')
     mobile = models.CharField(max_length=20,null=False)
-    assignedDoctorId = models.PositiveIntegerField(null=True)
+    # assignedDoctorId = models.PositiveIntegerField(null=True)
     status=models.BooleanField(default=False)
     @property
     def get_name(self):
