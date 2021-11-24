@@ -85,9 +85,6 @@
               <!-- <div class="form-group">
                 {% render_field patientForm.symptoms class="form-control" placeholder="Symptoms" %}
               </div> -->
-              <!-- <div class="form-group">
-                {% render_field patientForm.profile_pic required="required" class="form-control" placeholder="Profile Picture" %}
-              </div> -->
             </div>
             <div class="col-md-6">
               <div class="form-group">
@@ -105,7 +102,15 @@
 
             </div>
           </div>
-          <button type="submit" class="btnSubmit">Register</button>
+          <button onclick="myalert()"  class="btnSubmit">
+            Register
+          </button>
+          <script>
+            function myalert() 
+            {
+                alert("Registered Successfully!!!");
+            }
+        </script>
           <div class="text-center">Already have an account? <a href="patientlogin">Login here</a></div>
         </div>
       </div>
