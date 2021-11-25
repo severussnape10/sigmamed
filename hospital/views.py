@@ -638,7 +638,7 @@ def patient_book_appointment_view(request):
             appointment.status=False
             appointment.save()
         return HttpResponseRedirect('patient-view-appointment')
-    return render(request,'hospital/patient_book_appointment.html',context=mydict)
+    return render(request,'hospital/patient_view_appointment.html',context=mydict)
 
 
 
