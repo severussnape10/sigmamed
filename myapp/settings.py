@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-z4(_epcfko8)bnpr$a*2yvo98o9#=71he=1cb^4=4#kn)k48!@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'sigmamed.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'sigmamed.herokuapp.com','*',]
 
 
 # Application definition
